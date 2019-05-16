@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Codebito</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Century Gothic;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background:  #1abc9c; 
+  color: white;
+}
+
+/* Increase the font size of the heading *s/
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: White;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+       
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+</style>
+
+</style>
+<script type="text/javascript" src="jquery.js"></script>
+
+<script type="text/javascript">
+
+
+$(document).ready(function(){
+
+
+    $(".imgclick").mousedown(function(){
+
+
+        var mrgtb = parseInt($(this).css("margin-top"));
+
+        var mrglf = parseInt($(this).css("margin-left"));
+
+        mrgtb=mrgtb+3;
+
+        mrglf=mrglf+3;
+
+            $(this).css("margin-top",mrgtb+"px").css("margin-left",mrglf+"px");
+
+
+    }).mouseup(function(){
+
+        var mrgtb = parseInt($(this).css("margin-top"));
+
+        var mrglf = parseInt($(this).css("margin-left"));
+
+        mrgtb=mrgtb-3;
+
+        mrglf=mrglf-3;
+
+            $(this).css("margin-top",mrgtb+"px").css("margin-left",mrglf+"px");
+
+    }); 
+
+});
+</script>
+<style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          border: 1px solid #e7e7e7;
+          background-color: #f3f3f3;
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: #666;
+          text-align: center;
+          padding: 40px 40px;
+          text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+          background-color: #ddd;
+        }
+        
+        li a.active {
+          color: white;
+          background-color: #4CAF50;
+        }
+        </style>
+</head>
+<body>
+       
+<div class="header">
+        <font face ="Century Gothic">
+  <h1>Welcome to Codebito</h1>
+  <p> Learn Coding</p>
+        </font>
+</div>
+
+<div class="navbar">
+  <ul> 
+        <a href="CodebitoMain.html">
+                <img src="LogoCodebito.jpg" alt="homeimg" class="center"  width="40px" height="40px">
+                </a>
+                <div class="middle">
+                  <div class="text">Home</div>
+                </div>
+                </li> 
+
+               <li>
+                <a href="CodebitoMain.html">
+                <img src="homeimg.png" alt="homeimg" class="center" style="width:30%">
+                </a>
+                <div class="middle">
+                  <div class="text">Home</div>
+                </div>
+                </li> 
+
+                   <li>
+                        <a href="VideoPage01.html">
+                    <img src="videoimg.png" alt="videosimg" class="center" style="width:30%">
+                </a>
+                    <div class="middle">
+                      <div class="text">Videos</div>
+                    </li> 
+               
+                       <li> 
+                            <a href="VRPage02.html">   
+                        <img src="vrimg.png"  alt="vrimage" class="center" style="width:30%">
+                    </a>
+                        <div class="middle">
+                          <div class="text">Virtual Reality</div> 
+                      </div>
+                    </li>
+
+                    <li> 
+                            <a href="ProfilePage01.html">   
+                        <img src="profileimg.png"  alt="vrimage" class="center" style="width:30%">
+                    </a>
+                        <div class="middle">
+                          <div class="text">Virtual Reality</div> 
+                      </div>
+                    </li>
+
+                      <li>
+                            <a href="AboutusPage01.html">
+                            <img src="aboutusimg.png"  alt="aboutusimage" class="center" style="width:30%">
+                        </a>
+                            <div class="middle">
+                              <div class="text">About us</div>
+                            </div>
+                            </li>
+                        </ul>
+
+                        
+  
+
+                    </div>
+                    
+
+
+  
+
+  
+               
+  </div>
+  <div class="main">
+      <br>
+      <br>
+      <h1> About Us </h1>
+      <br>
+      <body>
+            <font face ="Century Gothic">
+         
+        <PRE>  </font>
+          <font face ="Century Gothic">
+              <h1>About Us</h1>
+              <h4> </h4>
+        
+                  <h1> Prepared by:</h1>
+                  <h2> Dhruvil Dalwadi</h2>
+                  <h2> Moulesh Choudhury</h2>
+                  <h2> Saurav Kumar/h2>
+                  <h2> Harsh Mehta</h2>
+                  <h2> Dhruv Patel</h2>
+                  <h2> Meera Patel</h2>
+        
+                  
+                  <img src="VRBoximg.jpg" alt="Htmltag" class="center" style="width:50% height=60%">
+                  Photo of VR BOX
+          </PRE>
+        
+              </font>
+        
+        </CENTER>
+        <hr>
+                <font face ="Century Gothic">
+          <h2 align="center">Thank you</h2>
+          </font>
+        </body>
+    
+              
+              
+              
+           
+            
+          
+          
+     
+
+  
+   
+
+<div class="footer">
+        <font face ="Century Gothic">
+  <h2>Thank you</h2>
+  </font>
+</div>
+
+</body>
+</html>

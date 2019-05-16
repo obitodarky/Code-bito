@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css?family=Gloria+Hallelujah");
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400");
+@import url("https://fonts.googleapis.com/css?family=Akronim");
+@import url("https://fonts.googleapis.com/css?family=Indie+Flower");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.intro {
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  background: url("8cAbRXkMi.jpg") no-repeat 50% 50%;
+
+  display: table;
+  background-size: cover;
+}
+
+.intro:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #00a1ff, #ff00b1);
+  opacity: 0.7;
+}
+
+.intro .inner {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  max-width: none;
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 10%;
+}
+
+.content h1 {
+  font-family: "Gloria Hallelujah", sans-serif;
+  font-size: 600%;
+  font-weight: 100;
+  color: #e1efe9;
+  line-height: 70%;
+}
+
+.btn {
+  font-family: "Montserrat", sans-serif;
+  font-size: 135%;
+  font-weight: 400;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: solid #0084ff;
+  padding: 10px 20px;
+  border-radius: 9px;
+  transition: all 0.5s;
+}
+
+.btn:hover {
+  color: #cbdfd6;
+  border: solid #cbdfd6;
+}
+
+.wave {
+  position: absolute;
+  height: 143px;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  background: url(wave.png);
+  animation: animate 10s linear infinite;
+}
+
+.wave:before {
+  content: "";
+  height: 143px;
+  width: 100%;
+  background: url(wave.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.4;
+  animation: animate-reverse 10s linear infinite;
+}
+
+.wave:after {
+  content: "";
+  height: 143px;
+  width: 100%;
+  background: url(wave.png);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+  animation-delay: -5s;
+  animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    background-position: 0;
+  }
+
+  100% {
+    background-position: 1360px;
+  }
+}
+
+@keyframes animate-reverse {
+  0% {
+    background-position: 1360px;
+  }
+
+  100% {
+    background-position: 0;
+  }
+}
+
+/*--- Media Queries --*/
+@media screen and (max-width: 900px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 480px) {
+}

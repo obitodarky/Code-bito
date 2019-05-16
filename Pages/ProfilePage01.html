@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Codebito</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Century Gothic;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/logo Title */
+.header {
+  padding: 80px;
+  text-align: center;
+  background:  #1abc9c; 
+  color: white;
+}
+
+/* Increase the font size of the heading *s/
+.header h1 {
+  font-size: 40px;
+}
+
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden;
+  background-color: White;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+       
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+
+.middle {
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.container:hover .image {
+  opacity: 0.3;
+}
+
+.container:hover .middle {
+  opacity: 1;
+}
+
+.text {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  padding: 16px 32px;
+}
+</style>
+
+</style>
+<script type="text/javascript" src="jquery.js"></script>
+
+<script type="text/javascript">
+
+
+$(document).ready(function(){
+
+
+    $(".imgclick").mousedown(function(){
+
+
+        var mrgtb = parseInt($(this).css("margin-top"));
+
+        var mrglf = parseInt($(this).css("margin-left"));
+
+        mrgtb=mrgtb+3;
+
+        mrglf=mrglf+3;
+
+            $(this).css("margin-top",mrgtb+"px").css("margin-left",mrglf+"px");
+
+
+    }).mouseup(function(){
+
+        var mrgtb = parseInt($(this).css("margin-top"));
+
+        var mrglf = parseInt($(this).css("margin-left"));
+
+        mrgtb=mrgtb-3;
+
+        mrglf=mrglf-3;
+
+            $(this).css("margin-top",mrgtb+"px").css("margin-left",mrglf+"px");
+
+    }); 
+
+});
+</script>
+<style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+          font-family: Century Gothic;
+        }
+        body {
+          background-color: #eaeaea;
+          padding-left: 200px;
+          padding-right: 200px;
+        }
+        .button {
+          display: inline-block;
+          border-radius: 4px;
+          background-color: #000;
+          border: none;
+          color: #FFFFFF;
+          text-align: center;
+          font-size: 15px;
+          padding: 20px;
+          width: 120px;
+          transition: all 0.5s;
+          cursor: pointer;
+          margin: 5px;
+        }
+        
+        .button span {
+          cursor: pointer;
+          display: inline-block;
+          position: relative;
+          transition: 0.7s;
+        }
+        
+        .button span:after {
+          content: '\00bb';
+          position: absolute;
+          opacity: 0;
+          top: 0;
+          right: -20px;
+          transition: 0.7s;
+        }
+        
+        .button:hover span {
+          padding-right: 25px;
+        }
+        
+        .button:hover span:after {
+          opacity: 1;
+          right: 0;
+        }
+        
+        
+        input[type=text], select, textarea, email{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #7b7b7b;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+        input[type=password], select, textarea, email{
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #7b7b7b;
+            border-radius: 4px;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+        
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+        
+        <script>
+        var myInput = document.getElementById("psw");
+        var letter = document.getElementById("letter");
+        var capital = document.getElementById("capital");
+        var number = document.getElementById("number");
+        var length = document.getElementById("length");
+        
+        // When the user clicks on the password field, show the message box
+        myInput.onfocus = function() {
+          document.getElementById("message").style.display = "block";
+        }
+        
+        // When the user clicks outside of the password field, hide the message box
+        myInput.onblur = function() {
+          document.getElementById("message").style.display = "none";
+        }
+        
+        // When the user starts to type something inside the password field
+        myInput.onkeyup = function() {
+          // Validate lowercase letters
+          var lowerCaseLetters = /[a-z]/g;
+          if(myInput.value.match(lowerCaseLetters)) { 
+            letter.classList.remove("invalid");
+            letter.classList.add("valid");
+          } else {
+            letter.classList.remove("valid");
+            letter.classList.add("invalid");
+        }
+        
+          // Validate capital letters
+          var upperCaseLetters = /[A-Z]/g;
+          if(myInput.value.match(upperCaseLetters)) { 
+            capital.classList.remove("invalid");
+            capital.classList.add("valid");
+          } else {
+            capital.classList.remove("valid");
+            capital.classList.add("invalid");
+          }
+        
+          // Validate numbers
+          var numbers = /[0-9]/g;
+          if(myInput.value.match(numbers)) { 
+            number.classList.remove("invalid");
+            number.classList.add("valid");
+          } else {
+            number.classList.remove("valid");
+            number.classList.add("invalid");
+          }
+        
+          // Validate length
+          if(myInput.value.length >= 8) {
+            length.classList.remove("invalid");
+            length.classList.add("valid");
+          } else {
+            length.classList.remove("valid");
+            length.classList.add("invalid");
+          }
+        }
+        </script>
+        
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+        
+        .f{
+          font-family: Century Gothic;
+        }
+        
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+        
+        .container {
+            border-radius: 5px;
+            background-color: #d2d2d2;
+            padding: 20px;
+        }
+        
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+        
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+        #country{
+          font-family: Century Gothic;
+        }
+        p{
+          font-size: 24px;
+        }
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        h2{
+          font-size: 40px;
+        }
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media (max-width: 600px) {
+            .col-25, .col-75, input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+        </style>
+<style>
+        ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          border: 1px solid #e7e7e7;
+          background-color: #f3f3f3;
+        }
+        
+        li {
+          float: left;
+        }
+        
+        li a {
+          display: block;
+          color: #666;
+          text-align: center;
+          padding: 40px 40px;
+          text-decoration: none;
+        }
+        
+        li a:hover:not(.active) {
+          background-color: #ddd;
+        }
+        
+        li a.active {
+          color: white;
+          background-color: #4CAF50;
+        }
+        </style>
+</head>
+<body>
+       
+<div class="header">
+        <font face ="Century Gothic">
+  <h1>Welcome to Codebito</h1>
+  <p> Learn Coding</p>
+        </font>
+</div>
+
+<div class="navbar">
+  <ul> 
+
+        <a href="CodebitoMain.html">
+                <img src="LogoCodebito.jpg" alt="homeimg" class="center" width="40px" height="40px">
+                </a>
+                <div class="middle">
+                  <div class="text">Home</div>
+                </div>
+                </li> 
+
+               <li>
+                <a href="CodebitoMain.html">
+                <img src="homeimg.png" alt="homeimg" class="center" style="width:30%">
+                </a>
+                <div class="middle">
+                  <div class="text">Home</div>
+                </div>
+                </li> 
+
+                   <li>
+                        <a href="VideoPage01.html">
+                    <img src="videoimg.png" alt="videosimg" class="center" style="width:30%">
+                </a>
+                    <div class="middle">
+                      <div class="text">Videos</div>
+                    </li> 
+               
+                       <li> 
+                            <a href="VRPage02.html">   
+                        <img src="vrimg.png"  alt="vrimage" class="center" style="width:30%">
+                    </a>
+                        <div class="middle">
+                          <div class="text">Virtual Reality</div> 
+                      </div>
+                    </li>
+
+                    <li> 
+                            <a href="ProfilePage01.html">   
+                        <img src="profileimg.png"  alt="vrimage" class="center" style="width:30%">
+                    </a>
+                        <div class="middle">
+                          <div class="text">Virtual Reality</div> 
+                      </div>
+                    </li>
+
+                      <li>
+                            <a href="AboutusPage01.html">
+                            <img src="aboutusimg.png"  alt="aboutusimage" class="center" style="width:30%">
+                        </a>
+                            <div class="middle">
+                              <div class="text">About us</div>
+                            </div>
+                            </li>
+                        </ul>
+
+                        
+  
+
+                    </div>
+                    
+
+
+  
+
+  
+               
+  </div>
+  <div class="main">
+      <br>
+      <br>
+      <h1> Profile </h1>
+      <br>
+
+    
+
+
+      <div class="container">
+        <form action="SubmitMember.html">
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">Name</label>
+            </div>
+            <div class="col-75 f">
+              <input type="text" id="fname" name="firstname" placeholder="Enter Your Full Name" autofocus required>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-25">
+                <label for="fname">User Id</label>
+              </div>
+              <div class="col-75 f">
+                <input type="text" id="uname" name="username" placeholder="Enter your Username" autofocus required>
+              </div>
+           </div>
+          <div class="row">
+              <div class="col-25">
+                <label for="fname">Password</label>
+              </div>
+              <div class="col-75 f">
+                <input type="password" id="password" name="password" placeholder="Enter your Password" autofocus pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+              </div>
+           </div>
+      
+      
+          <div class="row">
+            <div class="col-25 f">
+              <label for="mail">E-mail</label>
+            </div>
+            <div class="col-75 f">
+              <input type="text" id="mail" name="mail" placeholder="Enter your E-mail ID" autofocus>
+            </div>
+          </div>
+      
+          <div class="row">
+            <div class="col-25 f">
+              <label for="lname">Contact Number</label>
+            </div>
+            <div class="col-75 f">
+              <input type="text" id="pass" name="mail" placeholder="Enter your Contact Number" autofocus required>
+            </div>
+          </div>
+      
+          <div class="row">
+            <div class="col-25 f">
+              <label for="country">Gender</label>
+            </div>
+            <div class="col-75 f">
+            <input type="Radio" name="sex" required value='male' size='35'>Male </font>
+            <input type="Radio" name="sex" required value='male' size='35'>Female </font>
+      </div>
+          </div>
+      
+          <div class="row">
+            <div class="col-25 f">
+              <label for="subject">Address</label>
+            </div>
+            <div class="col-75">
+              <textarea id="subject" name="subject" placeholder="Enter your Full Address" style="height:200px" autofocus></textarea>
+            </div>
+          </div>
+        <center>
+       
+      
+      
+        <button class="button" style="vertical-align: middle" input type="submit" value="SUBMIT"><span>Submit </span></button>
+      
+        <button class="button" style="vertical-align: middle" input type='reset' value='RESET'><span>Reset </span></button>
+      
+        </center>
+      
+        </form>
+      </div>
+                 
+              
+           
+            
+          
+          
+     
+
+  
+   
+
+<div class="footer">
+        <font face ="Century Gothic">
+  <h2>Thank you</h2>
+  </font>
+</div>
+
+</body>
+</html>

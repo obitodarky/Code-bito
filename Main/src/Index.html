@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Codebito</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+
+    <link rel="stylesheet" href="./Style.css" />
+    <link rel="stylesheet" href="./mobile-style.css" />
+    <link rel="stylesheet" type="text/css" href="box-hover-style.css">
+	<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <header>
+      <div class="container-fluid p-0"></div>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-md-7 col-sm-12  text-white">
+            <h6>
+              CODING FOR KIDS</i>
+            </h6>
+            <h1>LEARN. CODE. BUILD.</h1>
+            <p>
+              COME LEARN WHILE PLAYING GAMES AND SOLVING PUZZELS
+            </p>
+            <h6>Click on the icon   <i class="fas fa-arrow-circle-right"></i></h6>
+            <p></p>
+            <p></p>
+          </div>
+          <div class="col-md-5 col-sm-12  h-25">
+            <a href="#all"><img src="../assets/web-programming.svg" alt="Book"/></a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+
+      <section id="all">
+          <div class="container1" >
+
+              <div class="box">
+                <div class="icon"><i class="fa fa-globe" aria-hidden="true"></i></div>
+                <div class="content">
+                  <h3>Web Development</h3>
+                  <p>This course will teach you HTML and CSS Basics in a fun and intuitive way.</p>
+                  <a href="HTML/NewHTMLpage.html"><p>*Click Here To Explore*</p></a>
+                </div>
+              </div>
+
+
+
+              <div class="box" >
+                <div class="icon"><i class="fas fa-vr-cardboard"></i></div>
+                <div class="content">
+                  <h3>VR</h3>
+                  <p>In this course you will learn how VR(Virtual Reality) Works.</p>
+                  <a href="https://obitodarky.github.io/"><p>*Click Here To Explore*</p></a>
+                </div>
+              </div>
+
+              <div class="box">
+                <div class="icon"><i class="fas fa-brain"></i></i></div>
+                <div class="content">
+                  <h3>Logic Development</h3>
+                  <p>Develop your logic while playing fun games and puzzels.</p>
+                  <a href="Logic/CodeBitoGame1.html"><p>*Click Here To Explore*</p></a>
+                </div>
+              </div>
+
+
+          </div>
+      </section>
+
+    </main>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./main.js"></script>
+    <script>
+      // Select all links with hashes
+      $('a[href*="#"]')
+        // Remove links that don't actually link to anything
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function(event) {
+          // On-page links
+          if (
+            location.pathname.replace(/^\//, "") ==
+              this.pathname.replace(/^\//, "") &&
+            location.hostname == this.hostname
+          ) {
+            // Figure out element to scroll to
+            var target = $(this.hash);
+            target = target.length
+              ? target
+              : $("[name=" + this.hash.slice(1) + "]");
+            // Does a scroll target exist?
+            if (target.length) {
+              // Only prevent default if animation is actually gonna happen
+              event.preventDefault();
+              $("html, body").animate(
+                {
+                  scrollTop: target.offset().top
+                },
+                1000,
+                function() {
+                  // Callback after animation
+                  // Must change focus!
+                  var $target = $(target);
+                  $target.focus();
+                  if ($target.is(":focus")) {
+                    // Checking if the target was focused
+                    return false;
+                  } else {
+                    $target.attr("tabindex", "-1"); // Adding tabindex for elements not focusable
+                    $target.focus(); // Set focus again
+                  }
+                }
+              );
+            }
+          }
+        });
+    </script>
+  </body>
+</html>
